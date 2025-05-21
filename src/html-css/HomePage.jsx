@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
-import Echos from '../assets/Echos.png'
-import '../CSS/CssOne.css'
-
-
+import Echos from '../assets/Echos.png';
+import './HomePage.css';
 
 
 export default function PageOne () {
