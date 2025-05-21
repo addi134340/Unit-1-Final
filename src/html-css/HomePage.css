@@ -12,6 +12,7 @@
   background-color: #1f2937;
   min-height: 100vh;
   color: #e5e7eb;
+  overflow: hidden;
 }
 
 .header header {
@@ -140,6 +141,16 @@
 /* -------------------- */
 /* MEDIA QUERIES        */
 /* -------------------- */
+
+@media (max-width: 1024px) {
+  .weirdCaroselThing {
+    padding: 1rem;
+  }
+
+  .weirdCaroselThing .slider {
+    height: 180px;
+  }
+}
 
 @media (max-width: 768px) {
   .mainBody h1 {
