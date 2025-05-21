@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .entire {
   font-family: "Delius", cursive;
-  background-color: #4F46E5;
+  background-color: #1f2937;
   min-height: 100vh; 
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  color: #e5e7eb
 }
 
 .header header{
@@ -15,8 +21,9 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 150px;
     gap: 0.5rem;
-    background-color: (90deg, #7C3AED, #4F46E5);
+    background: linear-gradient(180deg, #1f2937, #111827);
 }
 
 #logo {
@@ -25,7 +32,116 @@
 }
 
 .header h2 {
-  font-size: 1.8rem;
-  margin: 0;
+  font-size: 2rem;
 }
+
+.buttons {
+    color: #4e46e5;
+}
+
+.mainBody {
+    text-align: left;
+    padding-top: 100px
+}
+
+.mainBody h1 {
+    font-size: 4rem;
+    white-space: nowrap;
+}
+
+.buttons {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    padding-top: 8em;
+    gap: 1.5em;
+    padding-right: 230px;
+}
+
+.getStarted, .viewLibrary {
+    border-radius: 6px;
+    font-size: 2.5rem;
+}
+
+.buttons button {
+    background-color: #383486;
+    font-family: "Quicksand", sans-serif;
+    color: #e5e7eb;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow:  9px #000;
+    padding: 0 8px 0 8px;
+}
+
+.buttons button:hover {
+    background-color: #201d58;
+}
+
+.buttons button:active {
+  background-color: #201d58;
+  box-shadow: 0 5px #000;
+  transform: translateY(4px);
+}
+
+.weirdCaroselThing {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  padding-left: 33em; 
+}
+
+.weirdCaroselThing .slider {
+  --quantity: 8;
+  width: 150px;         
+  height: 200px;        
+  transform-style: preserve-3d;
+  animation: autoRun 40s linear infinite;
+  position: relative;
+}
+
+@keyframes autoRun {
+  from {
+    transform: rotateX(-10deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-10deg) rotateY(360deg);
+  }
+}
+
+.weirdCaroselThing .slider .item {
+  position: absolute;
+  inset: 0;
+  transform:
+    rotateY(calc((var(--position) - 1) * 45deg))
+    translateZ(400px); 
+}
+
+.weirdCaroselThing .slider .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.weirdCaroselThing .mainBody p {
+    display: block;
+}
+
+.carosel-with-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 300px;
+  height: 50vh;
+}
+
+
+
 
