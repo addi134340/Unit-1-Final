@@ -53,7 +53,4 @@ export default function PageOne () {
     );
 }
 
-<div className="mainBody">
-                    <h1>Echos & Ink</h1>
-                    <p>Pair your stories with the perfect soundtrack.</p>
-                </div>
+

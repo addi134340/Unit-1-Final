@@ -1,82 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 .entire {
   font-family: "Delius", cursive;
   background-color: #1f2937;
-  min-height: 100vh; 
-  color: #e5e7eb
+  min-height: 100vh;
+  color: #e5e7eb;
 }
 
-.header header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 150px;
-    gap: 0.5rem;
-    background: linear-gradient(180deg, #1f2937, #111827);
+.header header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  gap: 0.5rem;
+  background: linear-gradient(180deg, #1f2937, #111827);
+  padding: 0 1rem;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 #logo {
-  width: 100px; 
-  height: auto; 
+  width: 80px;
+  height: auto;
 }
 
 .header h2 {
-  font-size: 2rem;
-}
-
-.buttons {
-    color: #4e46e5;
+  font-size: 1.75rem;
 }
 
 .mainBody {
-    text-align: left;
-    padding-top: 100px
+  text-align: center;
+  padding: 2rem;
 }
 
 .mainBody h1 {
-    font-size: 4rem;
-    white-space: nowrap;
+  font-size: 3rem;
+  white-space: normal;
 }
 
 .buttons {
-    display: flex;
-    align-items: flex-end;
-    justify-content: end;
-    padding-top: 8em;
-    gap: 1.5em;
-    padding-right: 230px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+  margin-top: 2rem;
+  padding: 0 1rem;
 }
 
 .getStarted, .viewLibrary {
-    border-radius: 6px;
-    font-size: 2.5rem;
+  border-radius: 6px;
+  font-size: 1.5rem;
 }
 
 .buttons button {
-    background-color: #383486;
-    font-family: "Quicksand", sans-serif;
-    color: #e5e7eb;
-    transition: 0.3s;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    box-shadow:  9px #000;
-    padding: 0 8px 0 8px;
+  background-color: #383486;
+  font-family: "Quicksand", sans-serif;
+  color: #e5e7eb;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 0 #000;
+  padding: 0.5em 1.2em;
 }
 
 .buttons button:hover {
-    background-color: #201d58;
+  background-color: #201d58;
 }
 
 .buttons button:active {
@@ -92,14 +89,15 @@
   perspective: 1000px;
   display: flex;
   align-items: center;
-  justify-content: flex-start; 
-  padding-left: 33em; 
+  justify-content: center;
+  padding-bottom: 8em;
+  
 }
 
 .weirdCaroselThing .slider {
   --quantity: 8;
-  width: 150px;         
-  height: 200px;        
+  width: 150px;
+  height: 200px;
   transform-style: preserve-3d;
   animation: autoRun 40s linear infinite;
   position: relative;
@@ -119,7 +117,7 @@
   inset: 0;
   transform:
     rotateY(calc((var(--position) - 1) * 45deg))
-    translateZ(400px); 
+    translateZ(400px);
 }
 
 .weirdCaroselThing .slider .item img {
@@ -130,18 +128,64 @@
   border: 2px solid black;
 }
 
-.weirdCaroselThing .mainBody p {
-    display: block;
-}
-
 .carosel-with-text {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-right: 300px;
-  height: 50vh;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
+/* -------------------- */
+/* MEDIA QUERIES        */
+/* -------------------- */
 
+@media (max-width: 768px) {
+  .mainBody h1 {
+    font-size: 2rem;
+    padding-top: 2.5em;
+  }
 
+  .getStarted, .viewLibrary {
+    font-size: 1.25rem;
+  }
+
+  .weirdCaroselThing {
+    padding: 0;
+    height: 300px;
+  }
+
+  .weirdCaroselThing .slider {
+    width: 120px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header header {
+    flex-direction: column;
+  }
+
+  #logo {
+    width: 60px;
+  }
+
+  .header h2 {
+    font-size: 1.5rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mainBody h1 {
+    font-size: 1.75rem;
+  }
+
+  .carosel-with-text {
+    padding: 1rem;
+  }
+}
 
