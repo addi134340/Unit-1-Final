@@ -25,14 +25,14 @@ export default function PageOne () {
             <div className="carosel-with-text">
                 <div className="weirdCaroselThing">
                     <div className="slider" style={ { "--quantity": 8} }>
-                        <div className="item" style={ { "--position": 1} }><img src={BookEight} alt="book cover"/></div>
-                        <div className="item" style={ { "--position": 2} }><img src={BookSeven} alt="book cover"/></div>
-                        <div className="item" style={ { "--position": 3} }><img src={BookSix} alt="book cover"/></div>
-                        <div className="item" style={ { "--position": 4} }><img src={BookFive} alt="book cover"/></div>
-                        <div className="item" style={ { "--position": 5} }><img src={BookFour} alt="book cover"/></div>
-                        <div className="item" style={ { "--position": 6} }><img src={BookThree} alt="book cover"/></div>
-                        <div className="item" style={ { "--position": 7} }><img src={BookOne} alt="book cover"/></div>
-                        <div className="item" style={ { "--position": 8} }><img src={BookTwo} alt="book cover"/></div>
+                        <div className="item" style={ { "--position": 1} }><img src={BookEight} alt="Kingdom of Ash"/></div>
+                        <div className="item" style={ { "--position": 2} }><img src={BookSeven} alt="Tower of Dawn"/></div>
+                        <div className="item" style={ { "--position": 3} }><img src={BookSix} alt="Empire of Storms"/></div>
+                        <div className="item" style={ { "--position": 4} }><img src={BookFive} alt="Queen of Shadows"/></div>
+                        <div className="item" style={ { "--position": 5} }><img src={BookFour} alt="Heir of Fire"/></div>
+                        <div className="item" style={ { "--position": 6} }><img src={BookThree} alt="Crown of Midnight"/></div>
+                        <div className="item" style={ { "--position": 7} }><img src={BookOne} alt="Throne of Glass"/></div>
+                        <div className="item" style={ { "--position": 8} }><img src={BookTwo} alt="Assassin's Blade"/></div>
                     </div>
                 </div>
                 <div className="mainBody">

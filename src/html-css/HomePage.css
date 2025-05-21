@@ -100,7 +100,7 @@
   width: 150px;
   height: 200px;
   transform-style: preserve-3d;
-  animation: autoRun 40s linear infinite;
+  animation: autoRun 60s linear infinite;
   position: relative;
 }
 
