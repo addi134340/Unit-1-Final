@@ -2,6 +2,7 @@ import Reach, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../html-css/SearchPage.css';
 import BackButton from '../Buttons/BackBtn';
+import { addToLibrary } from '../Library/addToLibrary';
 
 const BookSearch = () => {
     const [query, setQuery] = useState('');
@@ -62,6 +63,7 @@ const BookSearch = () => {
                         <Link to="/details">
                             <button type="button">Details</button>
                         </Link>
+                        <button onClick={() => addToLibrary(book)}>Add to Library</button>
                         <p>{info.description?.slice(0, 200)}...</p>
                         </div>
                     </div>
