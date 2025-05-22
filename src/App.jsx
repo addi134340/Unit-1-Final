@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PageOne from './html-css/HomePage';
 import BookSearch from './components/API/GoogleBooksAPI';
-import Library from './html-css/Library';
+import MyLibrary from './components/Library/MyLibrary';
 import DetailsPage from './html-css/DetailsPage';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         
         <Route path="/search" element={<BookSearch />} />
 
-        <Route path="/library" element={<Library />} />
+        <Route path="/library" element={<MyLibrary />} />
 
         <Route path="/details" element={<DetailsPage />} />
       </Routes>
