@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+.entire-search {
+    font-family: "Delius", cursive;
+    background-color: #1f2937;;
+    color: white;
+}
+
+.entire-search h1 {
+    text-align: center;
+    color: #fff;
+    padding-top: 2em;
+    font-size: 2rem;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-bar.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1f2937;;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar.top {
+  position: sticky;
+  top: 0;
+  background-color: #1f2937;;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  transform: none;
+  z-index: 10;
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
