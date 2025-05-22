@@ -1,7 +1,7 @@
 import Reach, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../html-css/SearchPage.css';
-import BackButton from './BackBtn';
+import '../../html-css/SearchPage.css';
+import BackButton from '../Buttons/BackBtn';
 
 const BookSearch = () => {
     const [query, setQuery] = useState('');

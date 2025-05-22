@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PageOne from './html-css/HomePage';
-import BookSearch from './components/GoogleBooksAPI';
+import BookSearch from './components/API/GoogleBooksAPI';
 import Library from './html-css/Library';
 import DetailsPage from './html-css/DetailsPage';
 
