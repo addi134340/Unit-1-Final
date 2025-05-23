@@ -18,7 +18,7 @@ export default function PageOne () {
         <>
         <div className="entire">
             <section>
-                <Header /> 
+                <Header title="Echos & Ink" /> 
             </section>
             <div className="carosel-with-text">
                 <div className="weirdCaroselThing">

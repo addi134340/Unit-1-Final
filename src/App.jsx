@@ -4,6 +4,7 @@ import PageOne from './html-css/HomePage';
 import BookSearch from './components/API/GoogleBooksAPI';
 import MyLibrary from './components/Library/MyLibrary';
 import DetailsPage from './html-css/DetailsPage';
+import AboutUs from './html-css/AboutUs';
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
       <Routes>
         
         <Route path="/" element={<PageOne />} />
+
+        <Route path="/about" element={<AboutUs />} />
         
         <Route path="/search" element={<BookSearch />} />
 

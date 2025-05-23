@@ -1,8 +1,9 @@
-import Reach, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../html-css/SearchPage.css';
 import BackButton from '../Buttons/BackBtn';
-import { addToLibrary } from '../Library/addToLibrary';
+import { addToLibrary } from '../Library/LibraryButtons/addToLibrary';
+import Header from '../Header/Footer/Header';
 
 const BookSearch = () => {
     const [query, setQuery] = useState('');
@@ -35,8 +36,8 @@ const BookSearch = () => {
 
     return (
         <div className="entire-search">
+            <Header title="Book Search"/>
             <BackButton />
-            <h1>Book Search</h1>
             <form onSubmit={handleSubmit} className={hasSearched ? 'search-bar top' : 'search-bar center'}>
                 <input
                 type="text"
@@ -53,21 +54,17 @@ const BookSearch = () => {
                 {books.map((book) => {
                 const info = book.volumeInfo;
                 return (
-                    <div>
                         <div key={book.id} style={{ borderBottom: '1px solid #ccc', marginBottom: '10px' }}>
                         <h2>{info.title}</h2>
                         {info.authors && <p>By {info.authors.join(', ')}</p>}
                         {info.imageLinks && (
                             <img src={info.imageLinks.thumbnail} alt={info.title} />
                         )}
-                        <Link to="/details">
+                        <Link to={`/details/${book.id}`}>
                             <button type="button">Details</button>
                         </Link>
-                        <button onClick={() => addToLibrary(book)}>Add to Library</button>
-                        <p>{info.description?.slice(0, 200)}...</p>
+                        <button onClick={() => addToLibrary(book)}>Add to Library</button><p>{info.description?.slice(0, 200)}...</p>
                         </div>
-                    </div>
-                    
                 );
                 })}
             </div>
