@@ -5,6 +5,7 @@ import BookSearch from './components/API/GoogleBooksAPI';
 import MyLibrary from './components/Library/MyLibrary';
 import AboutUs from './html-css/AboutUs';
 import BookDetails from './components/Details/DetailPage';
+import BookPlaylist from './components/PlaylistStuff/BookPlaylist';
 import './html-css/Media.css'
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
         <Route path="/library" element={<MyLibrary />} />
 
         <Route path="/details/:bookId" element={<BookDetails />} />
+
+        <Route path="/playlist/:bookId" element={<BookPlaylist />} />
       </Routes>
     </BrowserRouter>
   );

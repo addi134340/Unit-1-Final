@@ -5,6 +5,7 @@ import BackButton from '../Buttons/BackBtn';
 import { addToLibrary } from '../Library/LibraryButtons/addToLibrary';
 import Header from '../Header/Footer/Header';
 
+
 const BookSearch = () => {
     const [query, setQuery] = useState('');
     const [books, setBooks] = useState([]);
@@ -54,18 +55,28 @@ const BookSearch = () => {
                 {books.map((book) => {
                 const info = book.volumeInfo;
                 return (
-                        <div key={book.id} style={{ borderBottom: '1px solid #ccc', marginBottom: '10px' }}>
-                        <h2>{info.title}</h2>
-                        {info.authors && <p>By {info.authors.join(', ')}</p>}
-                        {info.imageLinks && (
-                            <img src={info.imageLinks.thumbnail} alt={info.title} />
-                        )}
-                        <Link to={`/details/${book.id}`}>
-                            <button type="button">Details</button>
-                        </Link>
-                        <button onClick={() => addToLibrary(book)}>Add to Library</button><p>{info.description?.slice(0, 200)}...</p>
+                        <div key={book.id} className="book-result">
+                            <h2>{info.title}</h2>
+                            {info.authors && <p>By {info.authors.join(', ')}</p>}
+
+                            <div className="img-button-wrapper">
+                                {info.imageLinks && (
+                                <img src={info.imageLinks.thumbnail} alt={info.title} />
+                                )}
+                                <div className="extra-buttons">
+                                <Link to={`/details/${book.id}`}>
+                                    <button type="button">Details</button>
+                                </Link>
+                                <Link to={`/playlist/${book.id}`}>
+                                    <button>View Playlist</button>
+                                </Link>
+                                <button onClick={() => addToLibrary(book)}>Add to Library</button>
+                                </div>
+                            </div>
+
+                            <p>{info.description?.slice(0, 200)}...</p>
                         </div>
-                );
+                    );
                 })}
             </div>
         </div>

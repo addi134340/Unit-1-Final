@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import Header from '../Header/Footer/Header';
 import BackButton from '../Buttons/BackBtn';
@@ -49,6 +50,9 @@ const BookDetails = () => {
                 </div>
             </div>
         </div>
+        <Link to={`/playlist/${book.id}`}>
+          <button>View Playlist</button>
+        </Link>
     </div>
   );
 };

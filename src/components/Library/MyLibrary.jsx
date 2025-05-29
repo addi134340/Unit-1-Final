@@ -20,37 +20,37 @@ const MyLibrary = () => {
     }
 
     return (
-        <div>
+        <>
             <Header title="My Library" />
             <BackButton />
             <div className="library-page">
-            {library.length === 0 ? (
-                <div style={{ textAlign: 'center', color: 'white'}}>
-                <p>You haven't added any books yet!</p>
-                <Link to="/search">
-                    <button type="button" className="add-books-button">Add Books!</button>
-                </Link>
+                {library.length === 0 ? (
+                <div className="empty-library-message">
+                    <p>You haven't added any books yet!</p>
+                    <Link to="/search">
+                        <button type="button" className="add-books-button">Add Books!</button>
+                    </Link>
                 </div>
-            ) : (
+                ) : (
                 library.map((book) => {
                     const info = book.volumeInfo;
                     return (
-                        <div key={book.id} style={{ marginBottom: '20px', borderBottom: '1px solid #ccc' }}>
-                            {info.imageLinks?.thumbnail && (
-                                <img src={info.imageLinks.thumbnail} alt={info.title }/>
-                            )}
-                            <h2>{info.title}</h2>
-                            {info.authors && <p> {info.authors.join(', ')}</p>}
-                            <Link to={`/details/${book.id}`}>
-                                <button type="button">More Details</button>
-                            </Link>
-                            <RemoveButton bookId={book.id} onRemove={handleRemove}/>
-                        </div>
+                        <div key={book.id} className="library-book-card">
+                        {info.imageLinks?.thumbnail && (
+                        <img src={info.imageLinks.thumbnail} alt={info.title} />
+                    )}
+                    <h2>{info.title}</h2>
+                    {info.authors && <p>By {info.authors.join(', ')}</p>}
+                    <Link to={`/details/${book.id}`}>
+                        <button type="button">More Details</button>
+                    </Link>
+                    <RemoveButton bookId={book.id} onRemove={handleRemove} />
+                    </div>
                     );
-                })
-            )}
+                    })
+                )}
             </div>
-        </div>
+        </>
     );
 }
 
