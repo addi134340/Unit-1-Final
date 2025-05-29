@@ -14,7 +14,6 @@ export default function Header({ title }) {
                     <NavLink to="/about">About Us</NavLink>
                     <NavLink to="/search">Book Search</NavLink>
                     <NavLink to="/library">My Library</NavLink>
-                    <NavLink to="/playlists">Playlists</NavLink>
                 </nav>
             </header>
         </div>

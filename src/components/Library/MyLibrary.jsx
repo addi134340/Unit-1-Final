@@ -25,7 +25,12 @@ const MyLibrary = () => {
             <BackButton />
             <div className="library-page">
             {library.length === 0 ? (
-                <p style={{ textAlign: 'center', color: 'white'}}>You haven't added any books yet!</p>
+                <div style={{ textAlign: 'center', color: 'white'}}>
+                <p>You haven't added any books yet!</p>
+                <Link to="/search">
+                    <button type="button" className="add-books-button">Add Books!</button>
+                </Link>
+                </div>
             ) : (
                 library.map((book) => {
                     const info = book.volumeInfo;
@@ -36,7 +41,7 @@ const MyLibrary = () => {
                             )}
                             <h2>{info.title}</h2>
                             {info.authors && <p> {info.authors.join(', ')}</p>}
-                            <Link to="/details">
+                            <Link to={`/details/${book.id}`}>
                                 <button type="button">More Details</button>
                             </Link>
                             <RemoveButton bookId={book.id} onRemove={handleRemove}/>

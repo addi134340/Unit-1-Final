@@ -3,11 +3,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PageOne from './html-css/HomePage';
 import BookSearch from './components/API/GoogleBooksAPI';
 import MyLibrary from './components/Library/MyLibrary';
-import DetailsPage from './html-css/DetailsPage';
 import AboutUs from './html-css/AboutUs';
+import BookDetails from './components/Details/DetailPage';
+import './html-css/Media.css'
 
 function App() {
-  return (
+  return ( 
     <BrowserRouter>
       <Routes>
         
@@ -19,7 +20,7 @@ function App() {
 
         <Route path="/library" element={<MyLibrary />} />
 
-        <Route path="/details" element={<DetailsPage />} />
+        <Route path="/details/:bookId" element={<BookDetails />} />
       </Routes>
     </BrowserRouter>
   );

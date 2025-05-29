@@ -1,25 +1,27 @@
 import Header from "../components/Header/Footer/Header";
 import BackButton from "../components/Buttons/BackBtn";
+import Footer from "../components/Header/Footer/Footer";
+import '../html-css/AboutUs.css';
 
 function AboutUs() {
   return (
     <>
     <Header title="About Us" />
     <BackButton />
-    <main style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
-      <h1>About Us</h1>
-      <p>
-        Welcome to our company! We are dedicated to providing excellent services and products.
-      </p>
-      <section>
-        <h2>Our Mission</h2>
-        <p>To deliver quality and value to our customers.</p>
-      </section>
-      <section>
-        <h2>Our Team</h2>
-        <p>We have a diverse team of experts passionate about what they do.</p>
-      </section>
-    </main>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '81vh' }}>
+      <main className="all-about" style={{ flex: 1 }}>
+        <h1>About Us</h1>
+        <p>Hey! Welcome to Echos & Ink!</p>
+        <section>
+          <h2>What are we?</h2>
+          <p>
+            Echos & Ink is an app created in React. Our purpose is to store books
+            and give the users a playlist based on the genres in the book.
+          </p>
+        </section>
+      </main>
+      <Footer />
+    </div>
     </>
   );
 }

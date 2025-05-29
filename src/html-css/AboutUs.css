@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+.all-about {
+    font-family: "Deluis", cursive;
+    color: #f9fafb;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.all-about p {
+    color: #d1d5db;
+}
+
+.all-about section {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #374151; 
+}

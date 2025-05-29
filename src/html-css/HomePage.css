@@ -127,6 +127,7 @@
   object-fit: cover;
   border-radius: 10px;
   border: 2px solid black;
+  box-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #fff;
 }
 
 .carosel-with-text {
@@ -199,4 +200,5 @@
     padding: 1rem;
   }
 }
+
 
