@@ -11,3 +11,7 @@ export const addToLibrary = (book) => {
     localStorage.setItem('myLibrary', JSON.stringify(updated));
     alert('Book added to your library!');
 };
+
+export const getLibrary = () => {
+  return JSON.parse(localStorage.getItem('myLibrary')) || [];
+};

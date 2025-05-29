@@ -1,0 +1,57 @@
+@media (max-width: 1024px) {
+  .weirdCaroselThing {
+    padding: 1rem;
+  }
+
+  .weirdCaroselThing .slider {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainBody h1 {
+    font-size: 2rem;
+    padding-top: 2.5em;
+  }
+
+  .getStarted, .viewLibrary {
+    font-size: 1.25rem;
+  }
+
+  .weirdCaroselThing {
+    padding: 0;
+    height: 300px;
+  }
+
+  .weirdCaroselThing .slider {
+    width: 120px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header header {
+    flex-direction: column;
+  }
+
+  #logo {
+    width: 40px;
+  }
+
+  .header h2 {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mainBody h1 {
+    font-size: 1.75rem;
+  }
+
+  .carosel-with-text {
+    padding: 1rem;
+  }
+}

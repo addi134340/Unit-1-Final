@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+body {
+    background-color: #1f2937;
+}
+
+.library-page {
+    font-family: "Delius", cursive;
+}
+
+.library-page p {
+    font-size: 2.5em;
+    display: inline
+}
+
+.add-books-button {
+  display: block;
+  padding: 0.5em 1em;
+  margin: 1em auto;
+  font-size: 1rem;
+  color: white;
+  background-color: #717885; 
+  border: 1px solid #374151;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Delius", cursive;
+}
+
+.add-books-button:hover {
+  background-color: #d1d5db;
+  color: #111827; 
+}
+
+.add-books-button:active {
+  transform: scale(0.98);
+}
+
+.add-books-button:focus {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+.library-page {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Delius', cursive;
+  color: white;
+}
+
+.library-book-card {
+  background-color: #1f2937;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.library-book-card img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.library-book-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.library-book-card p {
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
+
+.library-book-card button {
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  background-color: #383486;
+  color: #e5e7eb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  box-shadow: 3px 3px 0 #000;
+  transition: 0.3s;
+}
+
+.library-book-card button:hover {
+  background-color: #201d58;
+}
+
+.library-book-card button:active {
+  transform: translateY(4px);
+  box-shadow: 0 5px #000;
+}
+
+/* Empty state */
+.empty-library-message {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.add-books-button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-books-button:hover {
+  background-color: #0056b3;
+}

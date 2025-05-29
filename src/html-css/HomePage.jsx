@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Echos from '../assets/Echos.png';
 import BookOne from '../assets/book_1.png'
 import BookTwo from '../assets/book_2.png'
 import BookThree from '../assets/book_3.png'
@@ -9,6 +8,8 @@ import BookSix from '../assets/book_6.png'
 import BookSeven from '../assets/book_7.png'
 import BookEight from '../assets/book_8.png'
 import './HomePage.css';
+import GetStartedBtn from '../components/Buttons/GetStartedBtn';
+import Header from '../components/Header/Footer/Header';
 
 export default function PageOne () {
 
@@ -16,11 +17,8 @@ export default function PageOne () {
     return (
         <>
         <div className="entire">
-            <section className="header">
-                <header>
-                    <img src={Echos} alt="logo" id="logo"></img>
-                    <h2>Echos & Ink</h2>
-                </header>
+            <section>
+                <Header title="Echos & Ink" /> 
             </section>
             <div className="carosel-with-text">
                 <div className="weirdCaroselThing">
@@ -41,9 +39,7 @@ export default function PageOne () {
                 </div>
             </div>
             <section className="buttons">
-                <Link to="/search">
-                    <button type="button" className="getStarted" >Get Started</button>
-                </Link>
+                <GetStartedBtn />
                 <Link to="/library">
                     <button type="button" className="viewLibrary">View Library</button>
                 </Link>

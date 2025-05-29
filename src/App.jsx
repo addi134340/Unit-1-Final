@@ -2,21 +2,28 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PageOne from './html-css/HomePage';
 import BookSearch from './components/API/GoogleBooksAPI';
-import Library from './html-css/Library';
-import DetailsPage from './html-css/DetailsPage';
+import MyLibrary from './components/Library/MyLibrary';
+import AboutUs from './html-css/AboutUs';
+import BookDetails from './components/Details/DetailPage';
+import BookPlaylist from './components/PlaylistStuff/BookPlaylist';
+import './html-css/Media.css'
 
 function App() {
-  return (
+  return ( 
     <BrowserRouter>
       <Routes>
         
         <Route path="/" element={<PageOne />} />
+
+        <Route path="/about" element={<AboutUs />} />
         
         <Route path="/search" element={<BookSearch />} />
 
-        <Route path="/library" element={<Library />} />
+        <Route path="/library" element={<MyLibrary />} />
 
-        <Route path="/details" element={<DetailsPage />} />
+        <Route path="/details/:bookId" element={<BookDetails />} />
+
+        <Route path="/playlist/:bookId" element={<BookPlaylist />} />
       </Routes>
     </BrowserRouter>
   );

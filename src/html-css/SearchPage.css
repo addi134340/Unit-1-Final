@@ -60,3 +60,48 @@
 .search-bar button:hover {
   background-color: #0056b3;
 }
+
+.extra-buttons button {
+  background-color: #383486;
+  font-family: "Quicksand", sans-serif;
+  color: #e5e7eb;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #000;
+  padding: 0.5em 1.2em;
+}
+
+.extra-buttons button:hover {
+  background-color: #201d58;
+}
+
+.extra-buttons button:active {
+  background-color: #201d58;
+  box-shadow: 0 5px #000;
+  transform: translateY(4px);
+}
+
+.book-result {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.img-button-wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+
+.img-button-wrapper img {
+  max-width: 128px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.extra-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
